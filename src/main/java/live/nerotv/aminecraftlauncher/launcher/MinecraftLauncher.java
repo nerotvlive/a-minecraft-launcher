@@ -10,8 +10,8 @@ public abstract class MinecraftLauncher {
     private LauncherHook preLaunchHook;
     private LauncherHook postLaunchHook;
     private LauncherHook gameCloseHook;
-    private ArrayList<String> additionalJVMArgs;
-    private ArrayList<String> additionalEnvironmentalArgs;
+    private ArrayList<String> additionalJVMArgs = new ArrayList<>();
+    private ArrayList<String> additionalEnvironmentalArgs = new ArrayList<>();
 
     public void setGameCloseHook(LauncherHook gameCloseHook) {
         this.gameCloseHook = gameCloseHook;
