@@ -47,12 +47,16 @@ public class QuiltLauncher extends MinecraftLauncher {
                     framework.getAdditionalVmArgs().add("-XstartOnFirstThread");
                 }
 
-                for(String arg : getAdditionalJVMArgs()) {
-                    framework.getAdditionalVmArgs().add(arg);
+                if(getAdditionalJVMArgs()!=null&&!getAdditionalJVMArgs().isEmpty()) {
+                    for (String arg : getAdditionalJVMArgs()) {
+                        framework.getAdditionalVmArgs().add(arg);
+                    }
                 }
 
-                for(String arg : getAdditionalEnvironmentalArgs()) {
-                    framework.getAdditionalArgs().add(arg);
+                if(getAdditionalEnvironmentalArgs()!=null&&!getAdditionalEnvironmentalArgs().isEmpty()) {
+                    for (String arg : getAdditionalEnvironmentalArgs()) {
+                        framework.getAdditionalArgs().add(arg);
+                    }
                 }
 
                 try {
