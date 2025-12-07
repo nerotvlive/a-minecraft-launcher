@@ -1,5 +1,5 @@
 
-# **a Minecraft Launcher** `2025.8.2`
+# **a Minecraft Launcher** `2025.12.3`
 
 A third party Minecraft launching library with an EULA compliant name. Based on [OpenLauncherLib](https://github.com/FlowArg/OpenLauncherLib) and [FlowUpdater](https://github.com/FlowArg/FlowUpdater) by [FlowArg](https://github.com/FlowArg).
 
@@ -37,7 +37,7 @@ After adding the repository, add the "a Minecraft Launcher" dependency.
     <dependency>
         <groupId>live.nerotv</groupId>
         <artifactId>a-minecraft-launcher</artifactId>
-        <version>2025.8.2</version>
+        <version>2025.12.3</version>
     </dependency>
 </dependencies>
 ```
@@ -55,7 +55,7 @@ maven {
 
 After adding the repository, add the "a Minecraft Launcher" dependency.
 ```
-implementation("live.nerotv:a-minecraft-launcher:2025.8.2")
+implementation("live.nerotv:a-minecraft-launcher:2025.12.3")
 ```
 
 
@@ -71,7 +71,7 @@ maven {
 
 After adding the repository, add the "a Minecraft Launcher" dependency.
 ```
-implementation "live.nerotv:a-minecraft-launcher:2025.8.2"
+implementation "live.nerotv:a-minecraft-launcher:2025.12.3"
 ```
 ## How to install a Minecraft instance
 
