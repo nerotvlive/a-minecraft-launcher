@@ -4,7 +4,7 @@ import com.zyneonstudios.nexus.utilities.NexusUtilities;
 
 public class MinecraftVersion {
 
-    public Type getType(String version) {
+    public static Type getType(String version) {
         if(version.contains(".")) {
             try {
                 int i = Integer.parseInt(version.split("\\.")[1]);
@@ -22,7 +22,7 @@ public class MinecraftVersion {
         return Type.NEW;
     }
 
-    public ForgeType getForgeType(String mcVersion) {
+    public static ForgeType getForgeType(String mcVersion) {
         if(mcVersion.contains(".")) {
             try {
                 int i = Integer.parseInt(mcVersion.split("\\.")[1]);
