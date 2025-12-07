@@ -30,9 +30,9 @@ public class MinecraftVersion {
         if(version.contains(".")) {
             try {
                 int i = Integer.parseInt(version.split("\\.")[1]);
-                if (i < 13) {
+                if (i < 17) {
                     return Type.LEGACY;
-                } else if (i < 18) {
+                } else if (i < 21) {
                     return Type.SEMI_NEW;
                 } else {
                     return Type.NEW;
