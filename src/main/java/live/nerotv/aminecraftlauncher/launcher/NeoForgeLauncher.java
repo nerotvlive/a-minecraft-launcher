@@ -46,6 +46,15 @@ public class NeoForgeLauncher extends MinecraftLauncher {
                 if (OperatingSystem.getType() == OperatingSystem.Type.macOS) {
                     framework.getAdditionalVmArgs().add("-XstartOnFirstThread");
                 }
+
+                for(String arg : getAdditionalJVMArgs()) {
+                    framework.getAdditionalVmArgs().add(arg);
+                }
+
+                for(String arg : getAdditionalEnvironmentalArgs()) {
+                    framework.getAdditionalArgs().add(arg);
+                }
+
                 try {
                     gameProcess = framework.launch(minecraftVersion, neoForgeVersion, NoFramework.ModLoader.NEO_FORGE);
                     if (getPostLaunchHook() != null) {

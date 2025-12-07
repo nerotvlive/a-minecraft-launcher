@@ -45,6 +45,15 @@ public class FabricLauncher extends MinecraftLauncher {
                 if (OperatingSystem.getType() == OperatingSystem.Type.macOS) {
                     framework.getAdditionalVmArgs().add("-XstartOnFirstThread");
                 }
+
+                for(String arg : getAdditionalJVMArgs()) {
+                    framework.getAdditionalVmArgs().add(arg);
+                }
+
+                for(String arg : getAdditionalEnvironmentalArgs()) {
+                    framework.getAdditionalArgs().add(arg);
+                }
+
                 try {
                     gameProcess = framework.launch(minecraftVersion, fabricVersion, NoFramework.ModLoader.FABRIC);
                     if (getPostLaunchHook() != null) {
