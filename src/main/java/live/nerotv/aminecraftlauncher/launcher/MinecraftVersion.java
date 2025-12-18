@@ -7,7 +7,10 @@ public class MinecraftVersion {
     public static Type getType(String version) {
         if(version.contains(".")) {
             try {
-                int i = Integer.parseInt(version.split("\\.")[1]);
+                if(version.startsWith("1.")) {
+                    version = version.substring(2);
+                }
+                int i = Integer.parseInt(version.split("\\.")[0]);
                 if (i < 17) {
                     return Type.LEGACY;
                 } else if (i < 21) {
