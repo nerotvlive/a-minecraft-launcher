@@ -12,8 +12,10 @@ public class MinecraftVersion {
                 }
                 int i = Integer.parseInt(version.split("\\.")[0]);
                 if (i < 17) {
-                    return Type.LEGACY;
+                    return Type.VERY_OLD;
                 } else if (i < 21) {
+                    return Type.OLD;
+                } else if (i < 26) {
                     return Type.SEMI_NEW;
                 } else {
                     return Type.NEW;
@@ -42,9 +44,10 @@ public class MinecraftVersion {
     }
 
     public enum Type {
-        LEGACY,
+        VERY_OLD,
+        OLD,
         SEMI_NEW,
-        NEW
+        NEW,
     }
 
     public enum ForgeType {
